@@ -25,7 +25,8 @@ namespace ConnectionPoolExample
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                Console.WriteLine($"Checkin exception : {ex}");
+                throw;
             }
         }
 
@@ -96,7 +97,7 @@ namespace ConnectionPoolExample
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Log error : {ex}");
+                Console.WriteLine($"Checkout exception : {ex}");
                 throw;
             }
         }
